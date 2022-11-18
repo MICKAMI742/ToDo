@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ToDo.Pages;
 
 namespace ToDo
 {
@@ -23,6 +24,16 @@ namespace ToDo
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ButtonTasks_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new TasksPage();
+        }
+
+        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new AddPage();
         }
     }
 }

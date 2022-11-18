@@ -5,17 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToDo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid Background="Black">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="3*"></RowDefinition>
-            <RowDefinition Height="2*"></RowDefinition>
-            <RowDefinition Height="2*"></RowDefinition>
-            <RowDefinition Height="2*"></RowDefinition>
-        </Grid.RowDefinitions>
-        <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" Margin="20" Foreground="Gray">ToDo</Label>
-        <Button Grid.Row="1" FontSize="25" Width="300" Margin="20" Background="Gray">Zadanie</Button>
-        <Button Grid.Row="2" FontSize="25" Width="300" Margin="20" Background="Gray">Dodaj</Button>
-        <Button Grid.Row="3" FontSize="25" Width="300" Margin="20" Background="Gray">Edytuj</Button>
+        Title="ToDo" Height="750" Width="1000" FontFamily="Pericles" ResizeMode="NoResize">
+    <Grid>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="45" Background="Gray">
+            <TextBlock Text="ToDo: Manage your tasks" MinWidth="350" FontSize="30" TextAlignment="Center" VerticalAlignment="Center" Margin="100,0,0,0"/>
+            <Button Content="Zadania" MinWidth="100" Margin="10,5,0,5" Click="ButtonTasks_Click"/>
+            <Button Content="Dodaj" MinWidth="100" Margin="10,5,0,5" Click="ButtonAdd_Click"/>
+            <Button Content="Edytuj" MinWidth="100" Margin="10,5,0,5"/>
+            <Button Content="Wykonane" MinWidth="100" Margin="10,5,0,5"/>
+        </StackPanel>
+        <Frame x:Name="Main" Margin="0,45,0,0" NavigationUIVisibility="Hidden" />
     </Grid>
 </Window>

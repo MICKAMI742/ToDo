@@ -1,0 +1,29 @@
+﻿<Page x:Class="ToDo.Pages.AddPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ToDo.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddPage">
+
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Text="ToDo" Foreground="Gray" FontSize="30" TextAlignment="center" Margin="0,15, 0,15"/>
+        <StackPanel Grid.Row="1">
+            <TextBlock Foreground="Gray" FontSize="20" Text="Title" TextAlignment="center" Margin="0,5,0,5"/>
+            <TextBox Name="_title" Background="Gray" MinHeight="80" Margin="20,15,20,0"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <TextBlock Text="Desription" Foreground="Gray" FontSize="20" TextAlignment="center"/>
+            <TextBox Name="_description" Margin="20" Background="Gray" MinHeight="150"/>
+        </StackPanel>
+        <Button Content="+" Grid.Row="4" MinHeight="50" MinWidth="150" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="35" Margin="0,0,20,0" Background="Gray" Click="Button_Click"/>
+    </Grid>
+</Page>

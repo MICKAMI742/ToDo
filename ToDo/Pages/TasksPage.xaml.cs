@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,18 +11,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ToDo.Views
+namespace ToDo.Pages
 {
     /// <summary>
-    /// Logika interakcji dla klasy TasksWindow.xaml
+    /// Logika interakcji dla klasy TasksPage.xaml
     /// </summary>
-    public partial class TasksWindow : Window
+    public partial class TasksPage : Page
     {
-        public TasksWindow()
+        public TasksPage()
         {
             InitializeComponent();
+            ReadTasksFromFile();
+        }
+
+        public void ReadTasksFromFile()
+        {
+
         }
     }
 }

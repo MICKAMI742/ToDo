@@ -7,13 +7,38 @@
         mc:Ignorable="d"
         Title="ToDo" Height="750" Width="1000" FontFamily="Pericles" ResizeMode="NoResize">
     <Grid>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="45" Background="Gray">
-            <TextBlock Text="ToDo: Manage your tasks" MinWidth="350" FontSize="30" TextAlignment="Center" VerticalAlignment="Center" Margin="100,0,0,0"/>
-            <Button Content="Zadania" MinWidth="100" Margin="10,5,0,5" Click="ButtonTasks_Click"/>
-            <Button Content="Dodaj" MinWidth="100" Margin="10,5,0,5" Click="ButtonAdd_Click"/>
-            <Button Content="Edytuj" MinWidth="100" Margin="10,5,0,5"/>
-            <Button Content="Wykonane" MinWidth="100" Margin="10,5,0,5"/>
-        </StackPanel>
-        <Frame x:Name="Main" Margin="0,45,0,0" NavigationUIVisibility="Hidden" />
-    </Grid>
+        <Grid x:Name="panelHeader"  VerticalAlignment="Top" Height="50" Background="#FF2FECFA" MouseDown="PanelHeader_MouseDown">
+            <TextBlock Text="ToDo: Zarządzaj swoimi zadaniami" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
+        </Grid>
+        <Grid x:Name="slidePanel"  Background="#FF2FECFA" HorizontalAlignment="Left" Width="200">
+            <StackPanel>
+                <Grid Height="100" Background="white">
+                    <Button Background="Transparent" Click="ButtonMenu_Click" BorderBrush="Transparent" HorizontalAlignment="Right" VerticalAlignment="Top" Width="25">
+                        <Image Source="/menu.png"/>
+                    </Button>
+                </Grid>
+                <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" BorderBrush="Transparent" Background="Transparent">
+                    <ListViewItem Height="40" BorderBrush="black" Padding="5">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/clipboard.png" Height="25" Width="25"/>
+                            <Button Content="Zadania" Click="ButtonTasks_Click" Margin="10 0 0 0" Width="135" Background="Transparent" BorderBrush="Transparent"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="40" Margin="0 10 0 0" BorderBrush="black" Padding="5">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/plus.png" Height="25" Width="25"/>
+                            <Button Content="Dodaj" Click="ButtonAdd_Click"  Margin="10 0 0 0" Width="135" Background="Transparent" BorderBrush="Transparent"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="40" Margin="0 10 0 0" BorderBrush="black" Padding="5">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/edit.png" Height="25" Width="25"/>
+                            <Button Content="Edytuj" Margin="10 0 0 0" Width="135" Background="Transparent" BorderBrush="Transparent"/>
+                        </StackPanel>
+                    </ListViewItem>
+                </ListView>
+            </StackPanel>
+        </Grid>
+        <Frame HorizontalAlignment="Right" Width="800" Height="700" x:Name="Main" Margin="0,45,0,0" NavigationUIVisibility="Hidden" />
+        </Grid>
 </Window>

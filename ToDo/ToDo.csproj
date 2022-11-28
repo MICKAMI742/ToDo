@@ -8,7 +8,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="clipboard.png" />
+    <None Remove="edit.png" />
+    <None Remove="menu.png" />
+    <None Remove="plus.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Tasks\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="clipboard.png" />
+    <Resource Include="edit.png" />
+    <Resource Include="menu.png" />
+    <Resource Include="plus.png" />
   </ItemGroup>
 
 </Project>

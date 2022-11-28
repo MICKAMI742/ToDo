@@ -33,17 +33,22 @@ namespace ToDo.Pages
         public void ReadTasksFromFile()
         {
             string path = @"C:\Users\kleme\source\repos\ToDo\ToDo\Tasks\Tasks.txt";
-            Tasks task = new Tasks();
 
             List<string> lines = File.ReadAllLines(path).ToList();
 
             foreach (var item in lines)
             {
                 string[] items = item.Split(';');
-                task.Name = items[0];
-                task.Description = items[1];
-                task.IsDone = Convert.ToBoolean(items[2]);
-                tasks.Add(task);
+                Tasks task = new Tasks()
+                {
+                    Name = items[0],
+                    Description = items[1],
+                    IsDone = Convert.ToBoolean(items[2]),
+                };
+                if(task.IsDone == false)
+                {
+                    tasks.Add(task);
+                }
             }
         }
     }

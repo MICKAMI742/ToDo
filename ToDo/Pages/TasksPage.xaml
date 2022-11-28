@@ -13,19 +13,11 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
+                        <CheckBox IsChecked="{Binding IsDone}" HorizontalAlignment="Center"/>
                         <TextBlock
-                            Text="{Binding Name}"
-                            />
+                            Text=" "/>
                         <TextBlock
-                            Text=" "
-                            />
-                        <TextBlock
-                            Text="{Binding Description}"
-                            />
-                        <TextBlock
-                            Text=" "
-                            />
-                        <CheckBox IsChecked="{Binding IsDone}"/>
+                            Text="{Binding Name}"/>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

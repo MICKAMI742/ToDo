@@ -4,4 +4,5 @@ Koks;Joooo;False
 Koks;Joooo;False
 Koks;Joooo;False
 Koks;Joooo;False
-Masno;2;False
+Masno;2;True
+Pozdr;Prawie gotowe;False

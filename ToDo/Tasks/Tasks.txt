@@ -1,1 +1,7 @@
-Koks masno blabla;Polecanko;False
+Koks;Joooo;False
+Koks;Joooo;False
+Koks;Joooo;False
+Koks;Joooo;False
+Koks;Joooo;False
+Koks;Joooo;False
+Masno;2;False

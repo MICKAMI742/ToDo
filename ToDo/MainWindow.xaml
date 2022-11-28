@@ -14,7 +14,7 @@
             <StackPanel>
                 <Grid Height="100" Background="white">
                     <Button Background="Transparent" Click="ButtonMenu_Click" BorderBrush="Transparent" HorizontalAlignment="Right" VerticalAlignment="Top" Width="25">
-                        <Image Source="/menu.png"/>
+                        <Image Width="25" Height="25" Source="/menu.png"/>
                     </Button>
                 </Grid>
                 <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" BorderBrush="Transparent" Background="Transparent">

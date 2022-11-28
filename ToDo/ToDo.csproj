@@ -15,14 +15,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Tasks\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="clipboard.png" />
     <Resource Include="edit.png" />
     <Resource Include="menu.png" />
     <Resource Include="plus.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Tasks\" />
   </ItemGroup>
 
 </Project>

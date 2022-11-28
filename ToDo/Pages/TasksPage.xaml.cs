@@ -29,12 +29,7 @@ namespace ToDo.Pages
 
         public void ReadTasksFromFile()
         {
-            StreamReader sr = new StreamReader("C:\\Users\\kleme\\source\\repos\\ToDo\\ToDo\\Tasks\\Tasks.txt");
-            List<Tasks> tasks = new List<Tasks>();
-            while (!sr.EndOfStream)
-            {
 
-            }
         }
     }
 }

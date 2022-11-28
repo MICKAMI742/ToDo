@@ -39,6 +39,8 @@
                 </ListView>
             </StackPanel>
         </Grid>
-        <Frame HorizontalAlignment="Right" Width="800" Height="700" x:Name="Main" Margin="0,45,0,0" NavigationUIVisibility="Hidden" />
+        <Grid Width="800" HorizontalAlignment="Right" x:Name="mainContainer">
+            <Frame x:Name="Main" Margin="0,50,0,0" NavigationUIVisibility="Hidden" />
         </Grid>
+    </Grid>
 </Window>

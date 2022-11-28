@@ -5,25 +5,28 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ToDo.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="750"
+      MaxWidth="750" MaxHeight="450"
       Title="AddPage">
 
-    <Grid Background="Black">
+    <Grid Background="white">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"></RowDefinition>
             <RowDefinition Height="2*"></RowDefinition>
             <RowDefinition Height="3*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBlock Text="ToDo" Foreground="Gray" FontSize="30" TextAlignment="center" Margin="0,15, 0,15"/>
+        <TextBlock Text="ToDo" Foreground="#FF2FECFA" FontSize="30" TextAlignment="center" Margin="0,15, 0,15"/>
         <StackPanel Grid.Row="1">
-            <TextBlock Foreground="Gray" FontSize="20" Text="Title" TextAlignment="center" Margin="0,5,0,5"/>
-            <TextBox Name="_title" Background="Gray" MinHeight="80" Margin="20,15,20,0"/>
+            <TextBlock Foreground="#FF2FECFA" FontSize="20" Text="Title" TextAlignment="center" Margin="0,5,0,5"/>
+            <TextBox Name="_title" Background="#FF2FECFA" MinHeight="80" Margin="20,15,20,0"/>
         </StackPanel>
         <StackPanel Grid.Row="2">
-            <TextBlock Text="Desription" Foreground="Gray" FontSize="20" TextAlignment="center"/>
-            <TextBox Name="_description" Margin="20" Background="Gray" MinHeight="150"/>
+            <TextBlock Text="Desription" Foreground="#FF2FECFA" FontSize="20" TextAlignment="center"/>
+            <TextBox Name="_description" Margin="20" Background="#FF2FECFA" MinHeight="150"/>
         </StackPanel>
-        <Button Content="+" Grid.Row="4" MinHeight="50" MinWidth="150" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="35" Margin="0,0,20,0" Background="Gray" Click="Button_Click"/>
+        <Button Background="Transparent" BorderBrush="Transparent" Grid.Row="4" MinHeight="50" MinWidth="150" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="35" Margin="0,0,20,0" Click="Button_Click">
+            <Image Source="/plus.png" Width="50" Height="50"/>
+        </Button>  
     </Grid>
 </Page>

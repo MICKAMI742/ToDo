@@ -29,17 +29,18 @@ namespace ToDo
         {
             InitializeComponent();
             timer = new DispatcherTimer();
-            timer.Interval = new TimeSpan(0,0,0,0,10);
+            timer.Interval = new TimeSpan(0,0,0,0,0);
             timer.Tick += Timer_Tick;
 
             panelWidth = slidePanel.Width;
         }
-
+        // sliding panel logic
         private void Timer_Tick(object? sender, EventArgs e)
         {
             if (hidden)
             {
                 slidePanel.Width += 1;
+                mainContainer.Width -= 1;
                 if (slidePanel.Width >= panelWidth)
                 {
                     timer.Stop();
@@ -49,6 +50,7 @@ namespace ToDo
             else
             {
                 slidePanel.Width -= 1;
+                mainContainer.Width += 1;
                 if (slidePanel.Width <= 40)
                 {
                     timer.Stop();

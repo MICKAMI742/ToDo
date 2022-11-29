@@ -23,7 +23,7 @@ namespace ToDo.Pages
             task.Name = _title.Text;
             task.Description = _description.Text;
             task.IsDone = false;
-            sw.WriteLine(task.Name + ";" + task.Description + ";" + task.IsDone.ToString());
+            sw.WriteLine(task.SetID().ToString() + ";" +task.Name + ";" + task.Description + ";" + task.IsDone.ToString());
             sw.Close();
         }
     }

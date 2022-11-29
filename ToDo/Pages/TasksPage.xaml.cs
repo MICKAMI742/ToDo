@@ -28,7 +28,6 @@ namespace ToDo.Pages
             ReadTasksFromFile();
         }
 
-        //public List<Tasks> tasks = new List<Tasks>();
         public List<Tasks> tasks { get; set; } = new List<Tasks>();
         public void ReadTasksFromFile()
         {
@@ -41,15 +40,26 @@ namespace ToDo.Pages
                 string[] items = item.Split(';');
                 Tasks task = new Tasks()
                 {
-                    Name = items[0],
-                    Description = items[1],
-                    IsDone = Convert.ToBoolean(items[2]),
+                    Id = Convert.ToInt32(items[0]),
+                    Name = items[1],
+                    Description = items[2],
+                    IsDone = Convert.ToBoolean(items[3]),
                 };
-                if(task.IsDone == false)
+                if (task.IsDone == false)
                 {
                     tasks.Add(task);
                 }
             }
+        }
+
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void ShowDescription_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

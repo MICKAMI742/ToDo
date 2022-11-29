@@ -1,8 +1,14 @@
-Koks;Joooo;False
-Koks;Joooo;False
-Koks;Joooo;False
-Koks;Joooo;False
-Koks;Joooo;False
-Koks;Joooo;False
-Masno;2;True
-Pozdr;Prawie gotowe;False
+1;sadasd;asasdasd;False
+2;sadasd;asasdasdasda;False
+3;sadasd;asasdasdasda;False
+4;sadasd;asasdasdasda;False
+5;sadasd;asasdasdasda;False
+6;dadsasdasd;asdasdasd;False
+7;dadsasdasd;asdasdasd;False
+8;dadsasdasd;asdasdasd;False
+9;dadsasdasd;asdasdasd;False
+10;dadsasdasd;asdasdasd;False
+11;dadsasdasd;asdasdasd;False
+12;dadsasdasd;asdasdasd;False
+13;dadsasdasd;asdasdasd;False
+14;dadsasdasd;asdasdasd;False

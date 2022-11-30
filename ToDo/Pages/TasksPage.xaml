@@ -8,15 +8,19 @@
       MaxWidth="750" MaxHeight="450"
       Title="TasksPage">
     <Grid>
-        <ListView x:Name="myListView" ItemsSource="{Binding Path=tasks}" Background="#FF2FECFA">
+        <ListView x:Name="myListView" ItemsSource="{Binding Path=tasks}" 
+                  Background="#FF2FECFA" MouseDoubleClick="EditTask_MouseDoubleClick">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <CheckBox VerticalContentAlignment="Center" Content="{Binding Id}" IsChecked="{Binding IsDone}" Checked="CheckBox_Checked" HorizontalAlignment="Center"/>
+                        <CheckBox VerticalContentAlignment="Center" 
+                                  Content="{Binding Id}" IsChecked="{Binding IsDone}" 
+                                  Checked="CheckBox_Checked" HorizontalAlignment="Center"/>
                         <TextBlock
                             Text=" "/>
                         <Button
-                            Content="{Binding Name}" Background="Transparent" BorderBrush="Transparent" Click="ShowDescription_Click"/>
+                            Content="{Binding Name}" Background="Transparent" 
+                            BorderBrush="Transparent" Click="ShowDescription_Click"/>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

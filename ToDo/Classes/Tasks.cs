@@ -29,6 +29,10 @@ namespace ToDo.Pages
             {
                 StreamWriter sw = new StreamWriter(@"C:\Users\kleme\source\repos\ToDo\ToDo\Tasks\GlobalCount.txt");
                 this.Id = ++globalCount;
+                if(globalCount == 20)
+                {
+                    globalCount= 0;
+                }
                 sw.WriteLine(globalCount);
                 sw.Close();
             }

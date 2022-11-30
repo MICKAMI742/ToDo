@@ -54,12 +54,37 @@ namespace ToDo.Pages
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            
+            var myTask = myListView.SelectedIndex;
+            try
+            {
+                tasks[myTask].IsDone = true;
+                StreamWriter sw = new StreamWriter(@"C:\Users\kleme\source\repos\ToDo\ToDo\Tasks\Tasks.txt");
+                foreach (var task in tasks)
+                {
+                    if (task.IsDone != true)
+                    {
+                        sw.WriteLine(task.Id.ToString() + ";" + task.Name + ";" + task.Description + ";" + task.IsDone.ToString());
+                    }
+                }
+                sw.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Nie wybrano żadnego zadania", "Błąd");
+            }
         }
 
         private void ShowDescription_Click(object sender, RoutedEventArgs e)
         {
-
+            var myTask = myListView.SelectedIndex;
+            try
+            {
+                MessageBox.Show(tasks[myTask].Description, "Opis zadania");
+            }
+            catch
+            {
+                MessageBox.Show("Nie wyświetlono zawartości, ponieważ nie wybrano żadnego zadania", "Błąd");
+            }
         }
     }
 }

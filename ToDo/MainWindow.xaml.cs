@@ -71,5 +71,11 @@ namespace ToDo
                 DragMove();
             }
         }
+
+        private void EditTask_Click(object sender, EventArgs e)
+        {
+            EditTasksWindow window = new EditTasksWindow();
+            window.ShowDialog();
+        }
     }
 }

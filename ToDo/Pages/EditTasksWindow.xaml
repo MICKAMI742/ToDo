@@ -7,6 +7,35 @@
         mc:Ignorable="d"
         Title="EditTasksWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="14*"/>
+        </Grid.RowDefinitions>
         
+        <TextBox Grid.Row="0" Name="_title" Text="Tytuł"/>
+        <TextBox Grid.Row="1" Name="_description" Text="Opis"/>
+
+
+        <ListView x:Name="myListView" ItemsSource="{Binding Path=tasks}" 
+                  Background="#FF2FECFA" Grid.Row="2">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox VerticalContentAlignment="Center" 
+                                  Content="{Binding Id}" IsChecked="{Binding IsDone}" 
+                                  Checked="CheckBox_Checked" HorizontalAlignment="Center" />
+                        <TextBlock
+                            Text=" "/>
+                        <Button
+                            Content="{Binding Name}" Background="Transparent" 
+                            BorderBrush="Transparent" Click="ShowDescription_Click"/>
+                        <Button
+                            Content="Edytuj" Background="Transparent" BorderBrush="Transparent"
+                            Click="ButtonEdit_Click"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Window>

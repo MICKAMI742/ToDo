@@ -9,7 +9,7 @@
       Title="TasksPage">
     <Grid>
         <ListView x:Name="myListView" ItemsSource="{Binding Path=tasks}" 
-                  Background="#FF2FECFA" MouseDoubleClick="EditTask_MouseDoubleClick">
+                  Background="#FF2FECFA">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">

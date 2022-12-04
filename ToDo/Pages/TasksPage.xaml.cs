@@ -86,11 +86,5 @@ namespace ToDo.Pages
                 MessageBox.Show("Nie wyświetlono zawartości, ponieważ nie wybrano żadnego zadania", "Błąd");
             }
         }
-
-        private void EditTask_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            EditTasksWindow window = new EditTasksWindow();
-            window.ShowDialog();
-        }
     }
 }

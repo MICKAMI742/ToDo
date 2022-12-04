@@ -1,1 +1,1 @@
-8;Sztosik;Działa;False
+11;Masno;Gang;False
